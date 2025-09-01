@@ -1,25 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:paddingTop="24dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_marginTop="24dp"
     android:background="@color/background"
+    android:fitsSystemWindows="true"
     tools:context=".jerry_store">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_56dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="70dp" />
+
 
     <ImageView
+        android:id="@+id/profile_image"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:contentDescription="@string/profile_image"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
+        android:contentDescription="@string/profile_image"
         android:src="@drawable/profile_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/hi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10.5dp"
+        android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+        android:text="@string/hi_jerry"
+        android:textColor="@color/main_text_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secondary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+        android:text="@string/which_tom_do_you_want_to_buy"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/hi_text" />
+
+    <ImageButton
+        android:id="@+id/notification_box"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/notification_01"
+        android:contentDescription=""
+        android:background="@drawable/bg_rounded_outline"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+    <TextView
+        android:id="@+id/notification_badge"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/colored_rounded_bg"
+        android:text="@string/_3"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        android:elevation="4dp" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:hint="@string/search_about_tom"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:textColorHint="@color/hint_color"
+        android:background="@drawable/white_rounded_bg"
+        android:drawableStart="@drawable/search_normal"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_56dp" />
+    <ImageButton
+        android:id="@+id/filter_box"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/filter_horizontal"
+        android:contentDescription="@string/filter_image"
+        android:background="@drawable/colored_rectangle_bg"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_56dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
