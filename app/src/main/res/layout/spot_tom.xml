@@ -1,0 +1,107 @@
+
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/frame2"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/sectionText">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/card2"
+    android:layout_width="match_parent"
+    android:layout_height="219dp"
+    android:layout_marginTop="32dp"
+    android:background="@drawable/white_rounded_bg"
+    android:paddingLeft="8dp"
+    android:paddingTop="92dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+        android:text="@string/sport_tom"
+        android:textColor="@color/main_text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+        android:gravity="center_horizontal"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="-4dp"
+        android:text="He runs 1 meter... trips over his boot."
+        android:textAlignment="center"
+        android:textColor="@color/hint_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text11" />
+
+    <LinearLayout
+        android:id="@+id/price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="38dp"
+        android:background="@drawable/price_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/card2"
+       >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/bag_icon"
+            android:src="@drawable/money_bag_01" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+            android:text="@string/_5_3_cheeses"
+            android:textColor="@color/notification_color"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/colored_bg_add_to_cart"
+        android:contentDescription="@string/add_to_cart"
+        android:src="@drawable/add_to_cart_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/card2"
+        app:layout_constraintStart_toEndOf="@+id/price_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<ImageView
+    android:id="@+id/sport_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/tom"
+    android:translationY="12dp" />
+
+</FrameLayout>

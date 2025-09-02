@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame4"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/frame3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card4"
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/white_rounded_bg"
+        android:paddingLeft="8dp"
+        android:paddingTop="92dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/text44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+            android:text="@string/spy_tom"
+            android:textColor="@color/main_text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+            android:gravity="center_horizontal"
+            android:paddingBottom="12dp"
+            android:text="@string/disguises_itself_as_a_table"
+            android:textAlignment="center"
+            android:textColor="@color/hint_color"
+            android:textSize="12sp"
+            android:layout_marginTop="-4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text44" />
+
+        <LinearLayout
+            android:id="@+id/price_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/price_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/card4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/bag_icon"
+                android:src="@drawable/money_bag_01" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                android:text="@string/_12_cheeses"
+                android:textColor="@color/notification_color"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/colored_bg_add_to_cart"
+            android:contentDescription="@string/add_to_cart"
+            android:src="@drawable/add_to_cart_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/card4"
+            app:layout_constraintStart_toEndOf="@+id/price_layout4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/spy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/spy"
+        android:translationY="12dp" />
+
+</FrameLayout>
