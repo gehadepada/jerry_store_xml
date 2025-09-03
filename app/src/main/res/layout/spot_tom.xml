@@ -69,14 +69,42 @@
                 android:contentDescription="@string/bag_icon"
                 android:src="@drawable/money_bag_01" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/ibm_plex_sans_arabic_medium"
-                android:text="@string/_5_3_cheeses"
-                android:textColor="@color/notification_color"
-                android:textSize="12sp" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                        android:textColor="@color/notification_color"
+                        android:textSize="12sp" />
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@color/notification_color" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 cheeses"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+                    android:textColor="@color/notification_color"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
 
 
         </LinearLayout>
