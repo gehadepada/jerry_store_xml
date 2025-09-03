@@ -12,7 +12,7 @@
         android:id="@+id/card4"
         android:layout_width="match_parent"
         android:layout_height="219dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:minHeight="200dp"
         android:background="@drawable/white_rounded_bg"
         android:paddingLeft="8dp"
