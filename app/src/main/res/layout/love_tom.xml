@@ -1,8 +1,7 @@
 <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/frame3"
-    android:layout_width="0dp"
-    android:layout_columnWeight="1"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/sectionText">
@@ -11,6 +10,7 @@
         android:id="@+id/card3"
         android:layout_width="match_parent"
         android:layout_height="219dp"
+        android:minHeight="200dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/white_rounded_bg"
         android:paddingLeft="8dp"

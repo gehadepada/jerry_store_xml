@@ -212,38 +212,87 @@
         app:layout_constraintEnd_toStartOf="@+id/arrow"
         app:layout_constraintTop_toBottomOf="@id/frame" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sectionText"
-        android:orientation="vertical"
-        >
-
-        <GridLayout
+        <LinearLayout
             android:id="@+id/tomGrid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:orientation="horizontal"
-            android:rowCount="3"
-            android:useDefaultMargins="true">
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sectionText">
 
-            <include layout="@layout/spot_tom" />
 
-            <include layout="@layout/love_tom" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-            <include layout="@layout/bomb_tom" />
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp">
+                    <include layout="@layout/spot_tom" />
+                </FrameLayout>
 
-            <include layout="@layout/spy_tom" />
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp">
+                    <include layout="@layout/love_tom" />
+                </FrameLayout>
+            </LinearLayout>
 
-            <include layout="@layout/frozen_tom" />
 
-            <include layout="@layout/sleep_tom" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-        </GridLayout>
-    </LinearLayout>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp">
+                    <include layout="@layout/bomb_tom" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp">
+                    <include layout="@layout/spy_tom" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp">
+                    <include layout="@layout/frozen_tom" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp">
+                    <include layout="@layout/sleep_tom" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
