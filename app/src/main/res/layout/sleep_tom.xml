@@ -97,7 +97,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/sleeping"
+        android:src="@drawable/tom6"
         android:translationY="12dp" />
 
 </FrameLayout>
